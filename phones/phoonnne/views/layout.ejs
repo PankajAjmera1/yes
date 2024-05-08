@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title> <!-- Assuming you pass a title variable to your template -->
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/">Home</a>
+            <% if (!currUser) { %>
+                <a href="/login">Login</a>
+                <a href="/signup">Sign Up</a>
+            <% } else { %>
+                <span>Welcome, <%= currUser.username %></span>
+                <form action="/logout" method="POST" style="display: inline;">
+                    <button type="submit">Logout</button>
+                </form>
+            <% } %>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Your page content here -->
+    </div>
+</body>
+</html>

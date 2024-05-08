@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Phone</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Phone</h2>
+        <form action="/phones" method="POST">
+            <div class="form-group">
+                <label for="phoneName">Phone Name:</label>
+                <input type="text" id="phoneName" name="phone[phoneName]" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="phone[price]" required>
+            </div>
+            <div class="form-group">
+                <label for="isIOS">Is iOS:</label>
+                <select id="isIOS" name="phone[isIOS]" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <button type="submit">Add Phone</button>
+        </form>
+    </div>
+</body>
+</html>

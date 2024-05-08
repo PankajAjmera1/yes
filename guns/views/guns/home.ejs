@@ -1,0 +1,19 @@
+<% layout('layout/boilerplate') -%>
+<div class="d-flex flex-wrap">
+  <% for(let gun of allGuns) { %>
+  <div class="card" style="width: 20rem;">
+    <!-- <img src=<%= gun.imageUrl %> class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title"><%= gun.gunName %></h5>
+      <p class="card-text">Price: <%= gun.price %></p>
+      <p class="card-text">Legal: <%= gun.isLegal ? 'Yes' : 'No' %></p>
+      <p class="card-text">Automatic: <%= gun.automatic ? 'Yes' : 'No' %></p>
+      <a href="/gun/<%= gun._id %>" class="btn btn-success">Show</a>
+      <!-- If you want to implement like functionality -->
+      <!-- <form action="/gun/<%= gun._id %>/like" method="post">
+        <button class="btn btn-warning">Like</button>
+      </form> -->
+    </div>
+  </div>
+  <% } %>
+</div>

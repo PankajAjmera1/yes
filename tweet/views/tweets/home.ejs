@@ -1,0 +1,18 @@
+<% layout('layout/boilerplate') -%>
+<div class="d-flex flex-wrap">
+  <% for(let tweet of allTweets) { %>
+  <div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <p class="card-text"><%= tweet.tweetContent %></p>
+      <p class="card-text">Username: <%= tweet.username %></p>
+      <p class="card-text">Created Time: <%= tweet.createdTime %></p>
+      <p class="card-text">Likes: <%= tweet.likes %></p>
+      <p class="card-text">Retweets: <%= tweet.retweets %></p>
+      <!-- If you want to implement like functionality -->
+      <!-- <form action="/tweet/<%= tweet._id %>/like" method="post">
+        <button class="btn btn-warning">Like</button>
+      </form> -->
+    </div>
+  </div>
+  <% } %>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= phone.phoneName %></title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h2><%= phone.phoneName %></h2>
+        <div class="phone-details">
+            <p><strong>Price:</strong> $<%= phone.price %></p>
+            <p><strong>Operating System:</strong> <%= phone.isIOS ? 'iOS' : 'Android' %></p>
+            <p><strong>Description:</strong> <%= phone.description %></p>
+        </div>
+        <% if (phone.user) { %>
+            <div class="phone-user">
+                <p>Posted by: <%= phone.user.username %></p>
+            </div>
+        <% } %>
+        <a href="/phones">Back to list</a>
+    </div>
+</body>
+</html>

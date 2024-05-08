@@ -1,0 +1,30 @@
+<% layout('layout/boilerplate') %>
+
+<div class="container">
+    <h1>Add Gun</h1>
+    <form action="/gun" method="POST">
+        <div class="mb-3">
+            <label for="gunName" class="form-label">Gun Name</label>
+            <input type="text" class="form-control" id="gunName" name="gunName" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="mb-3">
+            <label for="isLegal" class="form-label">Is Legal</label>
+            <select class="form-select" id="isLegal" name="isLegal" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="automatic" class="form-label">Automatic</label>
+            <select class="form-select" id="automatic" name="automatic" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
